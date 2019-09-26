@@ -19,3 +19,7 @@ class Program
         d1.bark();
     }
 }
+
+Output
+Eating...
+Barking..
