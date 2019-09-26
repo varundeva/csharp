@@ -1,0 +1,23 @@
+using System.IO;
+using System;
+
+interface inter1
+{
+    void display();
+}
+
+class testClass:inter1
+{
+    public void display()
+    {
+        Console.WriteLine("Demonstration of interface");
+    }
+    public static void Main(String [] args)
+    {
+        testClass t = new testClass();
+        t.display();
+    }
+}
+
+Output
+Demonstration of interface
