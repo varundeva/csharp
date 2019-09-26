@@ -1,0 +1,62 @@
+//Implement Multiple Interfaces Having Same Method Name
+using System.IO;
+using System;
+ 
+public interface IShape{
+    //Cut out other methods to simplify example.
+    double Area();
+    int Sides {get;}
+}
+public interface IShapeDisplay
+{
+    void Display();
+}
+
+public class Square:IShape,IShapeDisplay
+{
+    private int InSides;
+    public int SideLength;
+    
+    public int Sides
+    {
+        get {return InSides;}
+    }
+    
+    public double Area()
+    {
+        return((double)(SideLength*SideLength));
+    }
+    public double Circumference()
+    {
+        return ((double) (Sides*SideLength));
+    }
+    
+    public Square()
+    {
+        InSides =4;
+    }
+    
+    public void Display()
+    {
+        Console.WriteLine("\n Displaying Square information:");
+        Console.WriteLine("Side length is {0}", this.SideLength);
+        Console.WriteLine("Sides {0}", this.Sides);
+        Console.WriteLine("Area  {0}",this.Area());
+    }
+}
+public class Multi
+{
+    public static void Main(string [] args){
+        Square mySquare = new Square();
+        mySquare.SideLength = 7;
+        mySquare.Display();
+    }
+}
+
+
+
+output
+ Displaying Square information:
+Side length is 7
+Sides 4
+Area  49
