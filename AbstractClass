@@ -1,0 +1,33 @@
+using System.IO;
+using System;
+
+abstract class AreaClass //declare class 'AreaClass' as abstract
+{
+    //declare method 'Area' as abstract
+    abstract public int Area();
+}
+class Square : AreaClass //class 'AreaClass' inherit in child class 'Square'
+{
+    int side=0;
+    public Square(int n) //constructor
+    {
+        side=n;
+    }
+    public override int Area()//the abstract method 'Area' is overridden here
+    {
+        return side*side;
+    }
+}
+
+class Program
+{//Main Method
+    public static void Main(string[] args)
+    {
+        Square s = new Square(6);
+        Console.WriteLine("Area=" + s.Area());
+    }
+}
+
+
+Output
+Area=36
