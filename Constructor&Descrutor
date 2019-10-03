@@ -1,0 +1,29 @@
+using System.IO;
+using System;
+namespace Tutlane {
+ class user {
+  public user() {
+    Console.WriteLine("An Instance of Class Created");
+   }
+   //Destructor
+   ~user() {
+    Console.WriteLine("An Instance of Class destroyed");
+   }
+ }
+ class Demo {
+  public static void Main(String[] args) {
+   Details();
+   GC.Collect();
+   Console.ReadLine();
+  }
+  public static void Details() {
+   //Created Instance of class
+   user User = new user();
+  }
+ }
+}
+
+
+Output
+An Instance of Class Created
+An Instance of Class destroyed
