@@ -1,0 +1,14 @@
+using System.IO;
+using System;
+
+class Demo
+{
+   public static void Main(String[] args)
+    {
+        GC.Collect(0);
+        Console.WriteLine("Garbage Collection in Generatiom 0 is : " + GC.CollectionCount(0));
+    }
+}
+
+Output
+Garbage Collection in Generatiom 0 is : 1
