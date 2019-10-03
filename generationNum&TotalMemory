@@ -1,0 +1,18 @@
+using System.IO;
+using System;
+
+class Demo
+{
+   public static void Main(String[] args)
+    {
+        Console.WriteLine("Total Memory :"+ GC.GetTotalMemory(false));
+        Demo obj = new Demo();
+        Console.WriteLine("The generation number of object obj is: " + GC.GetGeneration(obj));
+        Console.WriteLine("Total memeory: "+GC.GetTotalMemory(false));
+    }
+}
+
+Output
+Total Memory :2888
+The generation number of object obj is: 0
+Total memeory: 10032
