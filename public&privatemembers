@@ -1,0 +1,67 @@
+//Accessing Private member
+//C# program to illustrate the problems with public and private members
+using System.IO;
+using System;
+
+//public class
+public class C1{
+    //public data members
+    public int rn;
+    public string name;
+    
+    //private field
+    private int marks = 35;
+}
+//another public class
+public class C2{
+    public static void Main(string[] args)
+    {
+        //Creating Object of C1 class
+        C1 obj = new C1();
+        //setting values to public data members of class c1
+        obj.rn = 10000;
+        obj.name = null;
+        obj.marks = 45;
+        //display result
+        Console.WriteLine("Name:{0}\nRoll No:{1}\nMarks :{2}",obj.name,obj.rn,obj.marks);
+    }
+}
+
+Output
+Compilation failed: 2 error(s), 0 warnings
+main.cs(23,13): error CS0122: `C1.marks' is inaccessible due to its protection level
+main.cs(25,83): error CS0122: `C1.marks' is inaccessible due to its protection level
+
+
+//Not Accessing Private member
+//C# program to illustrate the problems with public and private members
+using System.IO;
+using System;
+
+//public class
+public class C1{
+    //public data members
+    public int rn;
+    public string name;
+    
+    //private field
+    //private int marks = 35;
+}
+//another public class
+public class C2{
+    public static void Main(string[] args)
+    {
+        //Creating Object of C1 class
+        C1 obj = new C1();
+        //setting values to public data members of class c1
+        obj.rn = 10000;
+        obj.name = null;
+        //obj.marks = 45;
+        //display result
+        Console.WriteLine("Name:{0}\nRoll No:{1}",obj.name,obj.rn);
+    }
+}
+
+Output
+Name:
+Roll No:10000
