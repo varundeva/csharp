@@ -1,0 +1,15 @@
+using System.IO;
+using System;
+
+class Program
+{
+   public static void Main(String[] args)
+    {
+        Program obj = new Program();
+        Console.WriteLine("The generation number of object obj is : "+GC.GetGeneration(obj));
+    }
+}
+
+
+Output
+The generation number of object obj is : 0
