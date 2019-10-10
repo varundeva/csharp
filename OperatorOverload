@@ -1,0 +1,41 @@
+//Rextester.Program.Main is the entry point for your code. Don't change it.
+//Compiler version 4.0.30319.17929 for Microsoft (R) .NET Framework 4.5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class item
+    {
+        public int i;
+        public item(int j)
+        {
+            i=j;
+        }
+        public static item operator*(item x, item y)
+        {
+            System.Console.WriteLine("operator *" +x.i+" "+y.i);
+            item z=new item(x.i*y.i);
+            return z;
+        }
+    }
+    public class Program
+    {
+        
+        public static void Main(string[] args)
+        {
+            item a=new item(10);
+            item b=new item(5);
+            item c;
+            c=a*b;
+            System.Console.WriteLine(c.i);
+        }
+    }
+}
+
+Output
+operator *10 5
+50
