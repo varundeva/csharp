@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void scholar(String fname,String lname,int age=20,String branch="cs")
+        {
+            Console.WriteLine("fname:{0}",fname);
+            Console.WriteLine("lname:{0}",lname);
+            Console.WriteLine("age:{0}",age);
+            Console.WriteLine("branch:{0}",branch);
+        }
+        public static void Main(string[] args)
+        {
+            scholar("Nikhil","GP");
+            scholar("Hemanth","Kumar",25);
+            scholar("Varun","Deva",21,"CSE");
+        }
+    }
+}
+
+Output
+fname:Nikhil
+lname:GP
+age:20
+branch:cs
+fname:Hemanth
+lname:Kumar
+age:25
+branch:cs
+fname:Varun
+lname:Deva
+age:21
+branch:CSE
